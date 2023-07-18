@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+/* nav style start here */
+.logo{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+}
