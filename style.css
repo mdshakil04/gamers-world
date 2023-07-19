@@ -99,7 +99,7 @@ body{
 .bannerText-container{
     padding-top: 120px;
     width: 50%;
-    background-image: url('./images/Group\ 14.png');
+    /* background-image: url('./images/Group\ 14.png'); */
 }
 .bannerText-container p{
     color: #534C64;
@@ -161,11 +161,80 @@ body{
     border: none;
 }
 /* Banner style ends here */
-
+/* Gamer Section style start here */
+.gamer-container{
+    display: flex;
+    width: auto;
+    align-items: center;
+    gap: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.gamerImage-container{
+    width: 50%;
+}
+.gamerImage-container img{
+    width: 100%;
+}
+.gamerText-container{
+    width: 50%;
+    text-align: right;
+    margin-top: 50px;
+}
+.colorful-header{
+    font-family: Work Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;    
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gamerText-container p{
+    color: #534C64;
+    font-family: Work Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 166.667% */
+}
+.quote{
+    color: #534C64;
+    font-family: Work Sans;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+}
+/* Online Games Container style start here */
+.onlineGames-container{
+    margin-top: 50px;
+}
+.onlineGames-container h2{
+    color: #0B0223;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.onlineGames-container p{
+    color: #534C64;
+    text-align: center;
+    font-family: Work Sans;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
 /* Responsive Media Query */
 @media screen and (max-width:576px) {
     .nav-container{
         margin-top: 100px;
+        
     }
     .nav-container, .right-nav, .about-nav{
         flex-direction: column;
@@ -191,54 +260,46 @@ body{
     .bannerText-container, .bannerImages-container{
         width: 100%;
     }
+    .bannerText-container p{
+        font-size: 15px;
+    }
     .button-container{
         display: flex;
     }
     .button-pink{
         width: auto;
         height: 60px;
-        margin-right: 20px;
-        display: inline-flex;
-        border-radius: 48px;
-        background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
-        color: #FFF;
-        font-family: Work Sans;
         font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: uppercase;
-        border: none;
+   
     }
     .button-blue{
         width: auto;
         height: 60px;
-        margin-right: 20px;
-        display: inline-flex;
-        border-radius: 48px;
-        color: #FFF;
-        background: #4EC5F7;
-        font-family: Work Sans;
         font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: uppercase;
-        border: none;
     }
     .banner-header{
-        font-family: Work Sans;
         font-size: 5em;
-        font-style: normal;
-        font-weight: 800;
-        line-height: normal;
-        text-transform: uppercase;
-        background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
-    
+    .gamer-container{
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin-top: 50px;
+        align-items: center;
+    }
+    .gamerText-container, .gamerImage-container{
+        width: 90%;
+    }
+    .gamerText-container{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .onlineGames-container h2, .colorful-header {
+        font-size: 25px;
+    }
+    .onlineGames-container p{
+        font-size: 12px;
+    }
     
 }
 @media screen and (min-width:576px) and (max-width:992px) {
@@ -254,5 +315,16 @@ body{
         align-items: center;
         padding: 0;
         
+    }
+    .gamer-container{
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+        padding: 0;
+        text-align: center;
+    }
+    .gamerText-container{
+        text-align: center;
     }
 }
