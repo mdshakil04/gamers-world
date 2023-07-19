@@ -306,13 +306,93 @@ body{
     right: 400px;
     z-index: 2;
 }
-/* Responsive Media Query */
+
+/* Games Catagories style start here */
+.games-catagories{
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-top: 150px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+.games{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.games:hover{
+    border: 2px solid #FF42A5 ;
+    border-radius: 50px;
+    background: #FFF;
+    width: 248px;
+    font-family: Work Sans;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* height: 600px; */
+    background: #0B0223;
+    margin-top: 50px;
+    padding-top: 80px;
+}
+.footer-fonts{
+    color: #FFF;
+}
+.footer-nav{
+    display: flex;
+    gap: 60px;
+    justify-content: space-around;
+}
+.footer-nav{
+    margin-top: 40px;
+    list-style: none;
+    color: #FFF;
+}
+.footer-nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+.footer-button{
+    margin-top: 50px;
+    
+}
+.fa-brands{
+    margin: 20px;
+    color: #FFF;
+}
+.footer-paragraph{
+    display: flex;
+    gap: 50px;
+}
+.footer-paragraph p{
+    color: #FFF;
+}
+.footer-container small{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #FFF;
+}
+/* Responsive Media Query For Mobile */
 @media screen and (max-width:576px) {
     .nav-container{
         margin-top: 100px;
         
     }
-    .nav-container, .right-nav, .about-nav, .onlineGamesCart-container, .instantPlay-container{
+    .nav-container, .right-nav, .about-nav, .onlineGamesCart-container, .instantPlay-container, .games-catagories{
         flex-direction: column;
     }
     .nav-container{
@@ -413,7 +493,20 @@ body{
     .inner-image img{
         width: 60%;
     }
+    .games-catagories{
+        width: auto;
+        padding-left: 15px;
+        padding-right: 0;
+        margin-top: 100px;
+        align-items: start;
+    }
+    .footer-nav{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
 }
+/* Responsive For Tablet */
 @media screen and (min-width:576px) and (max-width:992px) {
     .nav-container, .instantPlay-container{
         flex-direction: column;
@@ -448,8 +541,6 @@ body{
     }
     .instantPlay-container{
         width: auto;
-        /* padding-right: 0; */
-        /* padding-left: 10; */
 
     }
     .instant-image-container{
@@ -470,5 +561,14 @@ body{
     }
     .inner-image img{
         width: 100%;
+    }
+    .games-catagories{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-nav{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
     }
 }
