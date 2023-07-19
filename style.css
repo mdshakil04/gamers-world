@@ -260,6 +260,7 @@ body{
     justify-content: center;
     opacity: 0.8;
     background: linear-gradient(rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), lightgray 70% ;
+    transition: 0.2s 0.1s;
 }
 /* / cover no-repeat 
      url(<path-to-image>),
@@ -278,13 +279,40 @@ body{
     /* width: 48px; */
     color: #FFF;
 }
+/* Instant Play Container style Start here */
+.instantPlay-container{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+    
+}
+.instant-text-container{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+.instant-image-container{
+    width: 50%;
+    position:relative;
+}
+.inner-image{
+    position: absolute;
+    top: 360px;
+    right: 400px;
+    z-index: 2;
+}
 /* Responsive Media Query */
 @media screen and (max-width:576px) {
     .nav-container{
         margin-top: 100px;
         
     }
-    .nav-container, .right-nav, .about-nav, .onlineGamesCart-container{
+    .nav-container, .right-nav, .about-nav, .onlineGamesCart-container, .instantPlay-container{
         flex-direction: column;
     }
     .nav-container{
@@ -352,10 +380,42 @@ body{
         align-items: center;
         margin-left: 40px;
     }
-    
+    .instantPlay-container{
+        width: auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .instant-image-container, .instant-text-container{
+        margin-top: 50px;
+        width: 90%;
+    }
+    .instantPlay-container{
+        width: auto;
+        padding: 20px;
+
+    }
+    .instant-image-container{
+        width: 100%;
+    }
+    .main-image img{
+        width: 100%;
+    }
+    .instant-text-container{
+        width: 100%;
+    }
+    .inner-image{
+        /* width: 80%; */
+        position: absolute;
+        top: 300px;
+        right: 150px;
+        z-index: 2;
+    }
+    .inner-image img{
+        width: 60%;
+    }
 }
 @media screen and (min-width:576px) and (max-width:992px) {
-    .nav-container{
+    .nav-container, .instantPlay-container{
         flex-direction: column;
         margin-top: 50px;
         padding-bottom: 50px;
@@ -378,11 +438,37 @@ body{
     }
     .gamerText-container{
         text-align: center;
+       
     }
     .onlineGamesCart-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-left: 20px;
 
+    }
+    .instantPlay-container{
+        width: auto;
+        /* padding-right: 0; */
+        /* padding-left: 10; */
+
+    }
+    .instant-image-container{
+        width: 100%;
+    }
+    .main-image img{
+        width: 100%;
+    }
+    .instant-text-container{
+        width: 100%;
+    }
+    .inner-image{
+        /* width: 80%; */
+        position: absolute;
+        top: 220px;
+        right: 150px;
+        z-index: 2;
+    }
+    .inner-image img{
+        width: 100%;
     }
 }
